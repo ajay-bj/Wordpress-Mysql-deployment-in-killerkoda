@@ -32,10 +32,14 @@ Wordpress-Mysql-deployment-in-killerkoda/
 
 ```bash
 # 1. Deploy MySQL (db namespace)
+vim mysql-db.yaml
+# Paste the MySQL YAML file content here
 kubectl apply -f mysql-db.yaml
 kubectl get pods -n db
 
 # 2. Deploy WordPress (wordpress namespace)
+vim wordpress-app.yaml
+# Paste the WordPress YAML file content here  
 kubectl apply -f wordpress-app.yaml
 kubectl get pods -n wordpress
 
